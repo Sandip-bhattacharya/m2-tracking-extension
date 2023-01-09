@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="tracker" translate="label" sortOrder="2000">
+            <label>Tracker</label>
+        </tab>
+        <section id="tracker" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Tracker</label>
+            <tab>tracker</tab>
+            <resource>Sandip_Extension::tracker</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInStore="0" showInWebsite="0">
+                <field id="tracker_url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Tracker Integration Url</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

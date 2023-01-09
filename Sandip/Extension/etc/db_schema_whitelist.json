@@ -1,0 +1,18 @@
+{
+    "tracker": {
+        "column": {
+            "tracker_id": true,
+            "sku": true,
+            "tracking_code": true,
+            "tracking_message": true,
+            "create_at": true
+        },
+        "index": {
+            "TRACKER_TRACKER_ID": true,
+            "TRACKER_TRACKING_CODE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

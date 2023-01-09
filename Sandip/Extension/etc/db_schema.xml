@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="tracker" resource="default" engine="innodb" comment="Tracker">
+        <column xsi:type="int" name="tracker_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Tracker Id Column"/>
+        <column xsi:type="varchar" name="sku" length="255" nullable="false"
+                comment="Sku Column"/>
+        <column xsi:type="int" name="tracking_code" padding="10" unsigned="true" nullable="false"
+                comment="Tracking Code Column"/>
+        <column xsi:type="varchar" name="tracking_message" nullable="false" length="255"
+                comment="Tracking Message Column"/>
+        <column xsi:type="datetime" name="create_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="false"
+                comment="Create At Column"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="tracker_id"/>
+        </constraint>
+        <index referenceId="TRACKER_TRACKER_ID" indexType="btree">
+            <column name="tracker_id"/>
+        </index>
+        <index referenceId="TRACKER_TRACKER_CODE" indexType="btree">
+            <column name="tracking_code"/>
+        </index>
+    </table>
+</schema>
